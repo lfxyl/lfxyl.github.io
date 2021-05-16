@@ -34,13 +34,9 @@ category: about
 
 # About me
 
-USTC
+USTC => UCAS
 
-UCAS
-
-Huawei
-
-iFLYTEK
+Huawei => iFLYTEK
 
 
 # About my blog
