@@ -34,9 +34,14 @@ category: about
 
 # About me
 
-中科院信工所小硕。
-王者荣耀至尊玄铁。
-从肥科到怀科，本以为生活会一直单调无趣，但是却在一个春水初生的日子遇见了她。春天就这样来了。
+USTC
+
+UCAS
+
+Huawei
+
+iFLYTEK
+
 
 # About my blog
 
