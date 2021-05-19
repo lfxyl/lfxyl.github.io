@@ -46,7 +46,7 @@
 		 <div class="post-data">  
 	 <time datetime="{{ page.date | date: '%F %H:%M:%S'}}" itemprop="datePublished">发布时间：{{ page.date | date: "%F %H:%M:%S"}}</time>
      <a href="/tags#{{ page.category }}" title="访问 {{ page.category }}" data-hover="博客分类: {{ page.category }}">博客分类: {{ page.category }}</a>
-    <a href="#read"> 阅读次数: comments</a> 
+    <a href="#read"> 阅读次数: <span id="busuanzi_value_site_uv"></span></a>    
 			</div>
             <div class="post-tags">
                 {% unless page.tags == empty %}
@@ -106,23 +106,6 @@
 	</div>
 </article>
 
-<!-- <div class="related-post-lists">
-	<div class="post-lists">
-		<div class="post-lists-body">
-					<div class="post-list-item">
-				<div class="post-list-item-container">
-					<div class="item-label">
-						<div class="item-title"><a href="induction.html">归纳的随想</a></div>
-						<div class="item-meta clearfix">
-														<div class="item-meta-ico bg-ico-image" style="background: url('../usr/themes/pinghsu/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
-	                        							<div class="item-meta-cat"><a href="../category/thoughts/index.html">Thoughts</a></div>
-						</div>
-					</div>
-				</div>
-			</div>
-				</div>
-	</div>
-</div> -->
 {% include foot.html %}
 <!--liberxueconnnet-menu-->
 <div id="directory-content" class="directory-content">
