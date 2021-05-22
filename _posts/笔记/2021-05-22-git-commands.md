@@ -2,7 +2,6 @@
 layout: blog
 istop: true
 title: "Git 常用命令"
-banana: true
 category: 笔记
 background-image: null
 tags:
