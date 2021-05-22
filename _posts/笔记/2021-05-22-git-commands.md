@@ -1,7 +1,7 @@
 ---
 layout: blog
 istop: true
-title: "git常用命令"
+title: "Git 常用命令"
 banana: true
 category: 笔记
 background-image: null
@@ -10,9 +10,7 @@ tags:
 ---
 
 
-# Git 常用命令
-
-### 基本配置
+## 基本配置
 ```shell
 # 设置用户信息
 $ git config [--global] user.name "[name]"
@@ -25,7 +23,7 @@ $ git init [project-name]
 $ git clone [url]
 ```
 
-###  增加/删除文件
+##  增加/删除文件
 ```shell
 # 添加指定文件到暂存区
 $ git add [file1] [file2] ...
@@ -46,7 +44,7 @@ $ git mv [file-original] [file-renamed]
 
 [git rm详解](https://www.jianshu.com/p/1c442fd398b7)
 
-### 代码提交
+## 代码提交
 ```shell 
 # 提交暂存区到仓库区
 $ git commit -m [message]
@@ -63,7 +61,7 @@ $ git commit --amend -m [message]
 $ git commit --amend [file1] [file2] ...
 ```
 
-###  分支
+##  分支
 ```shell 
 # 列出所有本地分支
 $ git branch
@@ -96,7 +94,7 @@ $ git push origin --delete [branch-name]
 $ git branch -dr [remote/branch]
 ```
 
-###  标签
+##  标签
 
 ```shell 
 # 列出所有tag
@@ -121,7 +119,7 @@ $ git checkout -b [branch] [tag]
 
 [git tag详解](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%89%93%E6%A0%87%E7%AD%BE)
 
-### 查看信息
+## 查看信息
 ```shell 
 # 显示有变更的文件
 $ git status
@@ -167,7 +165,7 @@ $ git reflog
 ```
 
 
-### 远程同步
+## 远程同步
 ```shell 
 # 下载远程仓库的所有变动
 $ git fetch [remote]
@@ -187,7 +185,7 @@ $ git push [remote] --force
 $ git push [remote] --all
 ```
 
-### 撤销
+## 撤销
 ``` shell
 # 恢复暂存区的指定文件到工作区
 $ git checkout [file]
@@ -213,7 +211,7 @@ $ git stash
 $ git stash pop
 ```
 
-### 其他
+## 其他
 ```shell 
 # 生成一个可供发布的压缩包
 $ git archive
