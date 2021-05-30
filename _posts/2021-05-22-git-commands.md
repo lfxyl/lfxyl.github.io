@@ -3,7 +3,7 @@ layout: blog
 istop: true
 title: "Git 常用命令"
 category: 笔记
-background-color: pink
+background: pink
 tags:
 - git
 ---
