@@ -56,7 +56,7 @@ body > * :first-child {
 }
 
 p, blockquote, ul, ol, dl, table, pre {
-    margin: 20px 0;
+    margin: 10px 0;
     vertical-align: baseline;
 }
 
