@@ -7,15 +7,11 @@ tags:
 # - 晓楼
 # - 简述
 # - 关于
-# - Liber
-# - Xue
 # - 坐井观天阔
 redirect_from:
   - /about/
 category: about
 ---
-
-
 
 园林晴昼春谁主。
 
@@ -31,13 +27,11 @@ category: about
 
 当上苑柳秾时，别馆花深处。此际海燕偏饶，都把韶光与。
 
-
 # About me
 
 USTC => UCAS
 
 Huawei => iFLYTEK
-
 
 # About my blog
 
@@ -49,7 +43,6 @@ Huawei => iFLYTEK
 
 Jekyll 主题： liberxue
 
-
 # 联系方式
 ******
  
@@ -60,5 +53,3 @@ Jekyll 主题： liberxue
 * [邮件](mailto:xuff94@163.com)
  
 * [微博](https://weibo.com/u/3480948781/home)
-
-
