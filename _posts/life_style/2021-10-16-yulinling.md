@@ -3,7 +3,7 @@ layout: blog
 istop: false
 title: "雨霖铃-夜雨独酌"
 category: 生活随记
-background: grey
+background: green
 tags:
 - 雨霖铃
 ---
