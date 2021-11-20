@@ -1,6 +1,6 @@
 ---
 layout: blog
-istop: true
+istop: false
 title: "Git 常用命令"
 category: 笔记
 background: red
