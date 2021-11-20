@@ -1955,15 +1955,15 @@ pre code::after {
 }
 
 #post-poem p{
-    font-size: 25px;
+    font-size: 30px;
     font-family:"fangsong", serif;
     font-weight: 570;
     line-height: 1.5em;
     letter-spacing: 0.8em;
     text-align: center;
-    background: linear-gradient(#ff0000, #ff0000) no-repeat;
+    /* background: linear-gradient(#ff0000, #ff0000) no-repeat;
     background-size: 100% 1px;
-    background-position: 0 1.4em;
+    background-position: 0 1.4em; */
 
 }
 
