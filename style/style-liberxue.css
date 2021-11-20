@@ -1954,6 +1954,10 @@ pre code::after {
     color: #767676;
 }
 
+#post-poem{
+    padding-top: 1em;
+}
+
 #post-poem p{
     font-size: 28px;
     font-family:"fangsong", serif;
@@ -1964,7 +1968,6 @@ pre code::after {
     /* background: linear-gradient(#ff0000, #ff0000) no-repeat;
     background-size: 100% 1px;
     background-position: 0 1.4em; */
-
 }
 
 /* ==========================================================================
