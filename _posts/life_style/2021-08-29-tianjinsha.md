@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: poem
 istop: false
 title: "天净沙-柏堰湖雨后夏夜"
 category: 生活随记

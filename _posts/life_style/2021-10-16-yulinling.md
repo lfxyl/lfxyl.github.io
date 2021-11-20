@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: poem
 istop: false
 title: "雨霖铃-夜雨独酌"
 category: 生活随记
