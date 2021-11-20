@@ -13,11 +13,6 @@
                     <div class="info-text">
                         <h3 class="meta-title">站点统计</h3>
                         <p>
-                        <span id="busuanzi_container_page_pv">
-                            本页阅读量：<span id="busuanzi_value_page_pv"></span>
-                          </span>
-                        </p>
-                        <p>
                         <span id="busuanzi_container_site_uv">
                             本站访客数：<span id="busuanzi_value_site_uv"></span>                          
                         </span>
@@ -45,7 +40,6 @@
             <div class="meta-item meta-comments">
                 <h3 class="meta-title">最新文章</h3>
   {% for post in site.posts limit:14 %}        
-      {% if post.book %}
  <li><a href="{{ post.url }}" title="访问 {{ post.title }}" data-hover="{{ post.title }}">{{ post.title }}</a></li>
       {% endif %}
     {% endfor %}
