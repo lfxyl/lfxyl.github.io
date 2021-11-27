@@ -1510,7 +1510,6 @@ pre code::after {
     margin-right: auto !important;
     margin-left: auto !important;
     text-align: right;
-    overflow-y: scroll;
 }
 
 .directory-content.initial {
@@ -1540,9 +1539,14 @@ pre code::after {
     top: 100px;
     display: inline-block;
     text-align: left;
-    margin-top: 200px;
+    overflow-y: scroll;
+    height: 85%;
 }
 
+#directory::-webkit-scrollbar {
+    width: 0;
+}
+    
 #directory ul, #directory li {
     margin: 0;
     padding-left: 0;
