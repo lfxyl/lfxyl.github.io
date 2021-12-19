@@ -91,7 +91,7 @@ valgrind --tool=massif --time-unit=B --detailed-freq=1 --massif-out-file=./massi
 
 valgrind在程序结束时产生输出。如果是长时间运行的服务器程序，那么需要手动停止程序来生成采样文件。
 
-> 注意：不能使用 `kill -9`去杀死程序，否则不会生成采样文件。用`kill`就好。
+> 不能使用 `kill -9`去杀死程序，否则不会生成采样文件。用`kill`就好。
 
 massif输出的采样文件可以用ms_print命令来分析：
 
@@ -187,8 +187,8 @@ tcmalloc的使用有两种方式：
     4. 使用pprf分析输出文件。
 - 非侵入式：tcmalloc也可以不直接链接到程序中，即上述侵入式方式中的第一步可以省略，但第二步需要多设置一个环境变量：`export LD_PRELOAD=<path/to/tcmalloc/so>`。
 
-> 注意：
 > 如果要将tcmalloc链接到程序中，那么tcmalloc需要最后链接。
+
 > HEAPPROFILE指定的路径最后一个是生成快照的前缀，比如上述`HEAPPROFILE=/tmp/heapprof`的设置，会在tmp目录下生成heapprof.0001.heap，heapprof.0002.heap。。。这样的内存快照文件。
 
 另外，还可设置以下环境变量来控制tcmalloc的更多行为：
