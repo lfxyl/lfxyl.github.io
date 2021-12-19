@@ -2,7 +2,7 @@
 layout: blog
 istop: true
 title: "内存泄漏分析工具总结"
-category: 笔记
+category: 知识归纳
 background-image: https://s2.loli.net/2021/12/12/DAliMjwErWc89dH.jpg
 background: purple
 tags:
