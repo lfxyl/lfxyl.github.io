@@ -4,14 +4,14 @@ istop: false
 title: "行香子 阳澄湖踏青"
 category: 生活随记
 background: blue
-background-image: https://imgtu.com/i/q7Kkxx
+background-image: https://s1.ax1x.com/2022/04/03/q7KEM6.jpg
 tags:
 - 行香子
 ---
 
 鸥鸟喧鸣，杨柳招迎。
 
-好春光，扶面风清。、
+好春光，扶面风清。
 
 梅花厌老，澄水多情。
 
@@ -27,4 +27,5 @@ tags:
 
 
 ![q7KEM6.jpg](https://s1.ax1x.com/2022/04/03/q7KEM6.jpg)
+
 ![q7Kkxx.jpg](https://s1.ax1x.com/2022/04/03/q7Kkxx.jpg)
