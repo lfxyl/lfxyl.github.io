@@ -15,4 +15,4 @@ background-image: https://obohe.com/i/2022/04/10/xiv8k3.jpg
 俄尔冷月惹心秋，孤旅自怜加饭餐。
 
 
-![q7K](https://obohe.com/i/2022/04/10/xifeah.jpg)
+![](https://obohe.com/i/2022/04/10/xifeah.jpg)
