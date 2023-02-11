@@ -118,6 +118,7 @@ a {
     text-decoration: none;
     color: #313131;
     outline: 0;
+    margin-left: 20px;
 }
 
 /* a:active,a:focus,a:hover{color:#eb5055;outline:0;}  */
@@ -525,10 +526,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 .navbar-container {
     position: relative;
-    width: 1040px;
+    /* width: 1040px; */
     max-width: 100%;
     height: 80px;
-    margin: 0 auto;
+    margin: 0 5%;
 }
 
 .navbar-logo {
@@ -752,7 +753,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     -webkit-animation: fade-in .5s;
     animation: fade-in;
     animation-duration: .5s;
-    width: 75%;
+    width: 80%;
 }
 
 .index-page {
@@ -1075,8 +1076,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .post-header-thumb-container {
     position: relative;
     top: 100px;
-    max-width: 1024px;
-    margin: 0 auto;
+    /* max-width: 1024px; */
+    margin: 0 10%;
     -webkit-animation: auto;
     animation: fade-in;
     animation-duration: .5s;
@@ -1299,12 +1300,22 @@ pre code::after {
 }
 
 .post-info {
-    overflow: hidden;
+    overflow: scroll;
     margin: 25px -20px 0;
     padding: 25px 20px 20px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    /* white-space: nowrap; */
+    /* text-overflow: ellipsis; */
     border-top: 1px solid #e0e0e0;
+    text-align:center;
+}
+
+.post-info p a {
+    text-decoration: none;
+    color: #313131;
+    outline: 0;}
+
+.post-info::-webkit-scrollbar {
+    display:none    ;
 }
 
 .related-post-lists {
@@ -1968,7 +1979,7 @@ pre code::after {
 }
 
 #post-poem{
-    writing-mode: vertical-lr;
+    /* writing-mode: vertical-lr; */
     margin: 25px auto;
 }
 
@@ -1977,7 +1988,7 @@ pre code::after {
     font-family:"FangSong", "仿宋", STFangSong, "华文仿宋", Georgia, "Times New Roman", serif;
     font-weight: 560;
     line-height: 1.5em;
-    letter-spacing: 0.8em;
+    letter-spacing: 0.3em;
     text-align: center;
     /* background: linear-gradient(#ff0000, #ff0000) no-repeat;
     background-size: 100% 1px;
