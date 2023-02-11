@@ -1,9 +1,28 @@
 {% assign is_post = page.date %}
-<!DOCTYPE>
+<!DOCTYPE html>
 <html lang="zh-cn" data-scribe-reduced-action-queue="true">
   <head>
     <meta content='{{ page.title }} - {{ site.title }}' name='title' />
     <meta content='{{ page.title }} - {{ site.title }}' name='og:title' />
+    <link rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.16.4/katex.min.css">
+    <script defer src="https://cdn.bootcss.com/KaTeX/0.16.4/katex.min.js"></script>
+	<script defer>
+		var katex_config = {
+            delimiters: 
+            [
+                {left: "\\(", right: "\\)", display: true},
+                {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+                {left: "\\begin{align}", right: "\\end{align}", display: true},
+                {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+                {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+                {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+                {left: "\\[", right: "\\]", display: true},
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        };
+	</script>
+    <script defer src="https://cdn.bootcss.com/KaTeX/0.16.4/contrib/auto-render.min.js" onload="renderMathInElement(document.body,katex_config)"></script>
     <title>{{ page.title }} - {{ site.title }}</title>
     {% include head.html %}
   </head>
@@ -204,7 +223,8 @@ var postDirectoryBuild = function() {
 };
 postDirectoryBuild();
 </script>
-  <script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script >lang=hljs.initHighlightingOnLoad();</script>   
  </body>
 </html>
