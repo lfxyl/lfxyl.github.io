@@ -752,7 +752,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     -webkit-animation: fade-in .5s;
     animation: fade-in;
     animation-duration: .5s;
-    width: 65%;
+    width: 75%;
 }
 
 .index-page {
@@ -1959,8 +1959,17 @@ pre code::after {
     color: #767676;
 }
 
+#post-poem-wrapper{
+    overflow-x: scroll;
+}
+
+#post-poem-wrapper::-webkit-scrollbar {
+    display:none    ;
+}
+
 #post-poem{
-    margin: 25px;
+    writing-mode: vertical-lr;
+    margin: 25px auto;
 }
 
 #post-poem p{
@@ -2087,7 +2096,7 @@ pre code::after {
     }
 
     .post-page {
-        padding: 30px 25px 0;
+        padding: 30px 0 0;
     }
 
     .page-page {
@@ -2138,7 +2147,7 @@ pre code::after {
     }
 
     .post-page {
-        padding: 100px 25px 0;
+        padding: 100px 0 0;
     }
 
     .common-page .post-list-item {
