@@ -32,7 +32,3 @@ tags:
 
 苦去时多，来时少，此时晴。
 
-
-![q7KEM6.jpg](https://s1.ax1x.com/2022/04/03/q7KEM6.jpg)
-
-![q7Kkxx.jpg](https://s1.ax1x.com/2022/04/03/q7Kkxx.jpg)

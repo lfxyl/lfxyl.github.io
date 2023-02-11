@@ -28,6 +28,3 @@ background-image: https://obohe.com/i/2022/04/10/xiv8k3.jpg
 
 
 孤旅自怜加饭餐。
-
-
-![](https://obohe.com/i/2022/04/10/xifeah.jpg)
