@@ -1,127 +1,139 @@
 {% assign is_post = page.date %}
 <!DOCTYPE html>
 <html lang="zh-cn" data-scribe-reduced-action-queue="true">
-  <head>
-    <!-- <script type="text/javascript" src="http://cdn.repository.webfont.com/wwwroot/js/wf/youziku.api.min.js"></script> -->
-    <meta content='{{ page.title }} - {{ site.title }}' name='title' />
-    <meta content='{{ page.title }} - {{ site.title }}' name='og:title' />
-    <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" type="text/css" href="../style/style-liberxue.css">
-    {% include head.html %}
-  </head>
+
+<head>
+  <!-- <script type="text/javascript" src="http://cdn.repository.webfont.com/wwwroot/js/wf/youziku.api.min.js"></script> -->
+  <meta content='{{ page.title }} - {{ site.title }}' name='title' />
+  <meta content='{{ page.title }} - {{ site.title }}' name='og:title' />
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <link rel="stylesheet" type="text/css" href="../style/style-liberxue.css">
+  {% include head.html %}
+</head>
+
 <body class="" gtools_scp_screen_capture_injected="true">
-<header id="header" class="header bg-white">
+  <header id="header" class="header bg-white">
     <div class="navbar-container">
-      <a href="/?liberxue" title="访问 {{site.title }}" class="navbar-logo"> 
+      <a href="/?liberxue" title="访问 {{site.title }}" class="navbar-logo">
         <!-- <img src="{{ site.url }}/style/images/logo-liberxue.png" alt="{{ site.title }}"> -->
         <div>晓楼的博客</div>
       </a>
-        <div class="navbar-menu">
-            {% for link in site.links %}             
-            <a href="{% unless link.external %}{{ site.url }}{% endunless %}{{ link.url }}">{{ link.name }}</a>
-                {% endfor %}
-          </div>
-        <div class="navbar-search" onclick="">
-            <span class="icon-search"></span>
-            <form id="cb-search-btn" role="search">
-         <span class="search-box">
-         <input type="text" class="input" id="cb-search-content" required="true" placeholder="标题 标签..." maxlength="30" autocomplete="off">
-        </span>
-            </form>
-        </div>
-        <div class="navbar-mobile-menu" onclick="">
-            <span class="icon-menu cross"><span class="middle"></span></span>
-            <ul>
-               {% for link in site.links %}           
-                <li><a href="{% unless link.external %}{{ site.url }}{% endunless %}{{ link.url }}">{{ link.name }}</a></li>
-                 {% endfor %}
-            </ul>
-        </div>
+      <div class="navbar-menu">
+        {% for link in site.links %}
+        <a href="{% unless link.external %}{{ site.url }}{% endunless %}{{ link.url }}">{{ link.name }}</a>
+        {% endfor %}
+      </div>
+      <div class="navbar-search" onclick="">
+        <span class="icon-search"></span>
+        <form id="cb-search-btn" role="search">
+          <span class="search-box">
+            <input type="text" class="input" id="cb-search-content" required="true" placeholder="标题 标签..."
+              maxlength="30" autocomplete="off">
+          </span>
+        </form>
+      </div>
+      <div class="navbar-mobile-menu" onclick="">
+        <span class="icon-menu cross"><span class="middle"></span></span>
+        <ul>
+          {% for link in site.links %}
+          <li><a href="{% unless link.external %}{{ site.url }}{% endunless %}{{ link.url }}">{{ link.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
-</header>
-<div class="post-header-thumb bg-white}">
-	<div class="post-header-thumb-op"></div>
-	<div class="post-header-thumb">
-		<div class="post-header-thumb-container">
-    <h1 class="post-title" itemprop="name headline">
-	{{ page.title }}</h1>
-		 <div class="post-data">  
-	 <time datetime="{{ page.date | date: '%F %H:%M:%S'}}" itemprop="datePublished">发布时间：{{ page.date | date: "%F %H:%M:%S"}}</time>
-     <a href="/tags#{{ page.category }}" title="访问 {{ page.category }}" data-hover="博客分类: {{ page.category }}"> &nbsp&nbsp&nbsp 博客分类: {{ page.category }}</a>
-    <a href="#read"> 阅读次数: <span id="busuanzi_value_page_pv"></span></a>    
-			</div>
-            <div class="post-tags">
-                {% unless page.tags == empty %}
-      {% assign tags_list = page.tags %}
-      {% if tags_list.first[0] == null %}
-      {% for tag in tags_list %} 
+  </header>
+  <div class="post-header-thumb bg-white}">
+    <div class="post-header-thumb-op"></div>
+    <div class="post-header-thumb">
+      <div class="post-header-thumb-container">
+        <h1 class="post-title" itemprop="name headline">
+          {{ page.title }}</h1>
+        <div class="post-data">
+          <time datetime="{{ page.date | date: '%F %H:%M:%S'}}" itemprop="datePublished">发布时间：{{ page.date | date: "%F
+            %H:%M:%S"}}</time>
+          <a href="/tags#{{ page.category }}" title="访问 {{ page.category }}" data-hover="博客分类: {{ page.category }}">
+            &nbsp&nbsp&nbsp 博客分类: {{ page.category }}</a>
+          <a href="#read"> 阅读次数: <span id="busuanzi_value_page_pv"></span></a>
+        </div>
+        <div class="post-tags">
+          {% unless page.tags == empty %}
+          {% assign tags_list = page.tags %}
+          {% if tags_list.first[0] == null %}
+          {% for tag in tags_list %}
           <a href="/tags#{{ tag }}" title="访问{{ tag }}" data-hover="{{ tag }}">
-          {{ tag }} <span>({{ site.tags[tag].size }})</span>
-          {% unless forloop.last %}{% endunless %}
-</a>
-      {% endfor %}
-      {% else %}
-      {% for tag in tags_list %} 
+            {{ tag }} <span>({{ site.tags[tag].size }})</span>
+            {% unless forloop.last %}{% endunless %}
+          </a>
+          {% endfor %}
+          {% else %}
+          {% for tag in tags_list %}
           <a href="/tags#{{ tag[0] }}" title="访问 {{ tag[0] }}" data-hover="{{tag[0]}}">
             {{ tag[0] }} <span>({{ tag[1].size }})</span>
             {% unless forloop.last %}{% endunless %}
           </a>
-      {% endfor %}
-      {% endif %}
-      {% assign tags_list = nil %}
-    {% endunless %} 
-	</div>
-</div>
-</div></div>
-<article class="main-content post-page" itemscope itemtype="http://schema.org/Article">
-	<div class="post-header">
-		<h1 class="post-title" itemprop="name headline">
-			{{ page.title }}</h1>
-		<div class="post-data">
-				<time datetime="{{ page.date | date: '%F %H:%M:%S'}}" itemprop="datePublished">{{ page.date | date: "%F %H:%M:%S"}}</time>
-		</div>
-	</div>
-	<div id="post-content" class="post-content" itemprop="articleBody">
-         <p class="post-tags">
-    {% unless page.tags == empty %}
-      {% assign tags_list = page.tags %}
-      {% if tags_list.first[0] == null %}
-      {% for tag in tags_list %} 
-          <a href="/tags#{{ tag }}" title="访问{{ tag }}" data-hover="{{ tag }}">
+          {% endfor %}
+          {% endif %}
+          {% assign tags_list = nil %}
+          {% endunless %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <article class="main-content post-page" itemscope itemtype="http://schema.org/Article">
+    <div class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        {{ page.title }}</h1>
+      <div class="post-data">
+        <time datetime="{{ page.date | date: '%F %H:%M:%S'}}" itemprop="datePublished">{{ page.date | date: "%F
+          %H:%M:%S"}}</time>
+      </div>
+    </div>
+    <div id="post-content" class="post-content" itemprop="articleBody">
+      <p class="post-tags">
+        {% unless page.tags == empty %}
+        {% assign tags_list = page.tags %}
+        {% if tags_list.first[0] == null %}
+        {% for tag in tags_list %}
+        <a href="/tags#{{ tag }}" title="访问{{ tag }}" data-hover="{{ tag }}">
           {{ tag }} <span>({{ site.tags[tag].size }})</span>
           {% unless forloop.last %}{% endunless %}</a>
-      {% endfor %}
-      {% else %}
-      {% for tag in tags_list %} 
-          <a href="/tags#{{ tag[0] }}" title="访问{{ tag[0] }}"  data-hover="{{ tag[0] }}">
-            {{ tag[0] }} <span>({{ tag[1].size }})</span>
-            {% unless forloop.last %}{% endunless %}
-          </a>
-      {% endfor %}
-      {% endif %}
-      {% assign tags_list = nil %}
-    {% endunless %} 
-</p>
-<div id="post-poem-wrapper">
-  <div id="post-poem">
-      {{ content }}
-  </div>
-</div>
-		<p class="post-info">
-			本文由 <a href="/">晓楼</a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名</p>
-	</div>
-</article>
+        {% endfor %}
+        {% else %}
+        {% for tag in tags_list %}
+        <a href="/tags#{{ tag[0] }}" title="访问{{ tag[0] }}" data-hover="{{ tag[0] }}">
+          {{ tag[0] }} <span>({{ tag[1].size }})</span>
+          {% unless forloop.last %}{% endunless %}
+        </a>
+        {% endfor %}
+        {% endif %}
+        {% assign tags_list = nil %}
+        {% endunless %}
+      </p>
+      <div id="post-poem-wrapper">
+        <div id="post-poem">
+          {{ content }}
+        </div>
+      </div>
+      <script src="https://utteranc.es/client.js" repo="lfxyl/lfxyl.github.io" issue-term="title" theme="github-light"
+        crossorigin="anonymous" async>
+        </script>
+      <p class="post-info">
+        本文由 <a href="/">晓楼</a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"
+          rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可。本站文章除注明转载/出处外，均为本站原创或翻译，转载前注明出处
+    </div>
+  </article>
 
-{% include foot.html %}
-<!--liberxueconnnet-menu-->
-<div id="directory-content" class="directory-content">
+  {% include foot.html %}
+  <!--liberxueconnnet-menu-->
+  <div id="directory-content" class="directory-content">
     <div id="directory"></div>
-</div>
-<!--liberxueconnnet-menu-->
+  </div>
+  <!--liberxueconnnet-menu-->
 
-<!-- <script type="text/javascript">
+  <!-- <script type="text/javascript">
    $webfont.load("#post-poem p", "fcca5954ef6d4022901de4990e0515c9", "FangSong_GB2312");
    $webfont.draw();
 </script> -->
- </body>
+</body>
+
 </html>
