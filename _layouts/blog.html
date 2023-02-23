@@ -6,6 +6,7 @@
     <meta content='{{ page.title }} - {{ site.title }}' name='title' />
     <meta content='{{ page.title }} - {{ site.title }}' name='og:title' />
     <link rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.16.4/katex.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
     <script defer src="https://cdn.bootcss.com/KaTeX/0.16.4/katex.min.js"></script>
     <script defer>
         var katex_config = {
@@ -129,13 +130,11 @@
                 {% endunless %}
             </p>
             {{ content }}
-            <script src="https://utteranc.es/client.js" repo="lfxyl/lfxyl.github.io" issue-term="title"
-                theme="github-light" crossorigin="anonymous" async>
-                </script>
             <p class="post-info">
                 本文由 <a href="/">晓楼</a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"
                     rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可。本站文章除注明转载/出处外，均为本站原创或翻译，转载前注明出处
             </p>
+            <div id="waline"></div>
         </div>
     </article>
 
@@ -240,6 +239,22 @@
 
     <script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
     <script>lang = hljs.initHighlightingOnLoad();</script>
+
+    <script type="module">
+        import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+        import katex from 'https://unpkg.com/katex@0.16/dist/katex.mjs';
+        init({
+            el: '#waline',
+            serverURL: 'https://comment.kekeke.cn',
+            path: '/',
+            lang: 'en-US',
+            texRenderer: (blockMode, tex) =>
+                katex.renderToString(tex, {
+                    displayMode: blockMode,
+                    throwOnError: false,
+                }),
+        });
+    </script>
 </body>
 
 </html>

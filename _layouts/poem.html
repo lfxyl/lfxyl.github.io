@@ -8,6 +8,8 @@
   <meta content='{{ page.title }} - {{ site.title }}' name='og:title' />
   <title>{{ page.title }} - {{ site.title }}</title>
   <link rel="stylesheet" type="text/css" href="../style/style-liberxue.css">
+  <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+
   {% include head.html %}
 </head>
 
@@ -114,12 +116,11 @@
           {{ content }}
         </div>
       </div>
-      <script src="https://utteranc.es/client.js" repo="lfxyl/lfxyl.github.io" issue-term="title" theme="github-light"
-        crossorigin="anonymous" async>
-        </script>
       <p class="post-info">
         本文由 <a href="/">晓楼</a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"
           rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可。本站文章除注明转载/出处外，均为本站原创或翻译，转载前注明出处
+      </p>
+      <div id="waline"></div>
     </div>
   </article>
 
@@ -134,6 +135,15 @@
    $webfont.load("#post-poem p", "fcca5954ef6d4022901de4990e0515c9", "FangSong_GB2312");
    $webfont.draw();
 </script> -->
+
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+    init({
+      el: '#waline',
+      serverURL: 'https://comment.kekeke.cn',
+    });
+  </script>
 </body>
 
 </html>
