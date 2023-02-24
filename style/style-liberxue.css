@@ -1606,6 +1606,39 @@ pre code::after {
    #directory
    ========================================================================== */
 
+.gg-list {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs, 1));
+    width: 22px;
+    height: 20px;
+    border: 2px solid;
+    border-radius: 3px
+}
+
+.gg-list::after,
+.gg-list::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: currentColor;
+    top: 3px;
+    left: 3px;
+    box-shadow:
+        0 4px 0,
+        0 8px 0
+}
+
+.gg-list::after {
+    border-radius: 3px;
+    width: 8px;
+    left: 7px
+}
+
 .directory-content {
     position: relative;
     z-index: 99999;
@@ -1668,17 +1701,19 @@ pre code::after {
 #directory>ul {
     position: relative;
     border-left: 1px solid #ddd;
-    max-height:95%;
-    overflow-y: scroll;   
-    display: none; 
+    max-height: 95%;
+    overflow-y: scroll;
+    display: none;
 }
 
 #directory:hover>ul {
     position: relative;
     border-left: 1px solid #ddd;
-    max-height:95%;
-    overflow-y: scroll;    
-    display: block; 
+    max-height: 95%;
+    overflow-y: scroll;
+    display: block;
+    padding-right: 20px;
+    max-width: 500px;
 }
 
 #directory>ul::-webkit-scrollbar {
