@@ -31,25 +31,20 @@ category: about
 
 USTC => UCAS
 
-Huawei => iFLYTEK
+Huawei => iFLYTEK => Momenta
 
 # About my blog
 
-域 名：www.xufei.ren 创建于2018年04月 
-
 备案号：京ICP备17062905号-1
 
-服务器：阿里云到期后改用 github pages
+服务器：github pages
 
 Jekyll 主题： liberxue
 
 # 联系方式
 ******
  
-你可以通过以下几种方式联系到我。
-
-* [github](https://github.com/lfxyl) 
+你可以通过以下方式联系到我:
 
 * [邮件](mailto:xuff94@163.com)
  
-* [微博](https://weibo.com/u/3480948781/home)
