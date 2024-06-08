@@ -47,3 +47,4 @@
  
 * [Twitter](https://twitter.com/liberxue).
 
+前端使用katex进行公示渲染，katex中可以使用的latex语法参见 ：[常用数学公式排版KaTex语法总结](https://kissingfire123.github.io/2022/02/18_%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8Fkatex%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/)
