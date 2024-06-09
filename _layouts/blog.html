@@ -62,7 +62,7 @@
             </div>
         </div>
     </header>
-    <div class="post-header-thumb bg-white}">
+    <div class="post-header-thumb bg-white">
         <div class="post-header-thumb-op"></div>
         <div class="post-header-thumb">
             <div class="post-header-thumb-container">
@@ -226,7 +226,6 @@
                         link = document.createElement('a');
                         link.href = '#' + titleId[i];
                         link.title = '访问' + titleId[i];
-                        link.title = '访问' + titleId[i];
                         link.innerHTML = !isDirNum ? contentArr[i] :
                             dirNum.join('.') + ' ' + contentArr[i];
                         li.appendChild(link);
@@ -234,7 +233,7 @@
                     }
                     directory.appendChild(root);
                 };
-            createPostDirectory(document.getElementById('post-content'), document.getElementById('directory'), true);
+            createPostDirectory(document.getElementById('post-content'), document.getElementById('directory'), false);
         };
         postDirectoryBuild();
     </script>
