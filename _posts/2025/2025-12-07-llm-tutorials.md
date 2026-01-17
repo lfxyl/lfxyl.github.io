@@ -4,7 +4,7 @@ istop: false
 title: "langchain 入门笔记"
 category: 知识归纳
 background: grey
-background-image: 
+background-image: https://s2.loli.net/2026/01/17/TW8Yj7qekC9JzB4.png
 tags:
 - langchain
 - ai agent
