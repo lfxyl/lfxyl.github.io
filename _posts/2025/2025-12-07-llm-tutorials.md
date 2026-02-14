@@ -1,16 +1,16 @@
 ---
 layout: blog
 istop: false
-title: "langchain 入门笔记"
+title: "ollama 入门"
 category: 知识归纳
 background: grey
-background-image: https://s2.loli.net/2026/01/17/TW8Yj7qekC9JzB4.png
+background-image: https://files.seeusercontent.com/2026/02/14/2kfZ/OIP.webp
 tags:
-- langchain
-- ai agent
+- ollama
+- LLM
 ---
 
-# Ollama 
+# 安装
 ```bash
 # 安装
 curl -fsSL https://ollama.com/install.sh | bash
@@ -18,6 +18,7 @@ curl -fsSL https://ollama.com/install.sh | bash
 ollama --version
 ```
 
+# 常用命令
 ```bash
 # 运行模型。如果不存在则自动拉取
 ollama run llama3.2 
@@ -43,13 +44,6 @@ ollama create my-bot -f ./Modelfile
 ollama push my-username/my-model
 ```
 
-输入 ollama run 进入聊天界面后，可以使用以`/`开头的快捷指令来控制对话：
-- /bye 或 /exit：最重要！ 退出聊天界面，返回命令行。
-- /clear：清空当前的上下文记忆（开启一段新的对话）。
-- /show info：查看当前模型的详细参数信息。
-- /set parameter seed 123：设置随机种子（高级玩法，用于复现结果）。
-- /help：在聊天中查看所有可用的快捷键。
-
 以下参数可以用于 run/generate 命令：
 ```bash
 --num-predict <number>    限制输出 token 数
@@ -61,7 +55,16 @@ ollama push my-username/my-model
 --keepalive <seconds>     会话保持时间
 ```
 
-API（当 serve 运行时）
+# 常用指令
+输入 ollama run 进入聊天界面后，可以使用以`/`开头的快捷指令来控制对话：
+- /bye 或 /exit：最重要！ 退出聊天界面，返回命令行。
+- /clear：清空当前的上下文记忆（开启一段新的对话）。
+- /show info：查看当前模型的详细参数信息。
+- /set parameter seed 123：设置随机种子（高级玩法，用于复现结果）。
+- /help：在聊天中查看所有可用的快捷键。
+
+
+# API
 REST 端点（默认 http://localhost:11434/api）：
 
 ```
@@ -77,31 +80,7 @@ curl http://localhost:11434/api/generate \
   -d '{"model":"qwen2.5","prompt":"hello"}'
 ```
 
+# 模型列表
 [ollama 模型列表](https://ollama.com/library)
-
-# Langchain
-[Langchain](https://python.langchain.com/docs/get_started/introduction.html) 是一个开源的 LLM 应用开发框架，可以快速构建 LLM 应用。
-
-```bash
-# 安装langchain
-pip install langchain
-# 安装openai集成
-pip install langchain-openai
-```
-
-```python
-from langchain_openai import ChatOpenAI
-
-# 配置本地模型的 API 地址和密钥
-llm = ChatOpenAI(
-    openai_api_base=f'http://localhost:11434/api/v3',
-    openai_api_key=f'ACCESSCODE ...',  # app_key
-    model_name="DeepSeek-R1",   
-)
-
-# 调用模型并获取结果
-result = llm.invoke("你好，怎么称呼？")
-print(result)
-```
 
 
