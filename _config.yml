@@ -31,6 +31,12 @@ links:
     external:     false
 # ------------ CONFIGURABLE END ------------
 
+# 关闭服务端语法高亮，保留 markdown 中指定的语言（如 ```shell、```text）
+# 这样前端 highlight.js 会根据语言显示，而不是按内容猜测
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
+
 #permalink:        /:categories/:title.html
 permalink: /:year/:month/:day/:title.html
 defaults:
