@@ -11,7 +11,7 @@ tags:
 ---
 
 # 安装
-```bash
+```shell
 # 安装
 curl -fsSL https://ollama.com/install.sh | bash
 # 检查版本
@@ -19,7 +19,7 @@ ollama --version
 ```
 
 # 常用命令
-```bash
+```shell
 # 运行模型。如果不存在则自动拉取
 ollama run llama3.2 
 # 拉取模型。从库中下载模型但不运行 
@@ -45,7 +45,7 @@ ollama push my-username/my-model
 ```
 
 以下参数可以用于 run/generate 命令：
-```bash
+```text
 --num-predict <number>    限制输出 token 数
 --temperature <float>     控制随机性
 --top-k <int>             采样范围
@@ -67,7 +67,7 @@ ollama push my-username/my-model
 # API
 REST 端点（默认 http://localhost:11434/api）：
 
-```
+```text
 (post) /api/generate：文本生成
 (post) /api/chat：对话流式接口
 (post) /api/pull：远程拉取
@@ -75,9 +75,8 @@ REST 端点（默认 http://localhost:11434/api）：
 ```
 
 调用示例（curl）：
-```bash
-curl http://localhost:11434/api/generate \
-  -d '{"model":"qwen2.5","prompt":"hello"}'
+```shell
+curl http://localhost:11434/api/generate -d '{"model":"qwen2.5","prompt":"hello"}'
 ```
 
 # 模型列表
